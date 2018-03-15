@@ -1,6 +1,5 @@
-![](https://media.giphy.com/media/l3vR16pONsV8cKkWk/giphy.gif)
 # THINK 2018 
-## Compare and Comply: [Element Classification] (https://console.bluemix.net/docs/services/discovery/element-classification.html#element-classification) Lab
+## Compare and Comply: [Element Classification](https://console.bluemix.net/docs/services/discovery/element-classification.html#element-classification) Lab
 
 ---
 
@@ -12,7 +11,7 @@ The goal of this lab is to:
 4. Spark ideas around optimizing existing business processes by leveraging the output of Element Classification
 
 
-***Note:** Element Classification is available through all tiers of Watson Discovery Service and IBM Cloud Private. This lab will focus on the value derived from the output of Element Classification, with an experience most similar to IBM Cloud Private.*
+***Note:** Element Classification is available on both (Watson Discovery)[https://www.ibm.com/watson/services/discovery/] and (IBM Cloud Private)[https://www.ibm.com/cloud-computing/products/ibm-cloud-private/]. This lab will focus on the value derived from the output of Element Classification, with an experience most similar to IBM Cloud Private.*
 
 ---
 ## Overview
