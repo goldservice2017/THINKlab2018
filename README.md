@@ -94,11 +94,11 @@ The API response is formatted in JSON and should look something like:
 	"parties": [...]
 }
 ```
-- The key `document_text` corresponds to the **structured HTML representation of the original PDF**
-- The key `document_title` corresponds to the **title of the document**
+- `document_text` corresponds to the **structured HTML representation of the original PDF**
+- `document_title` corresponds to the **title of the document**
 
 
-The `elements` array contains a series of objects, each object describes an element of the contract that Element Classification has identified. The following code represents a typical element:
+The `elements` array contains a series of objects, each object describes an element of the contract that Element Classification identified. Below is an example of a typical element:
 ```
 {
    "sentence" : {
@@ -120,3 +120,26 @@ The `elements` array contains a series of objects, each object describes an elem
    ]
 }
 ```
+
+There are four important parts of an element object:
+
+- `sentence_text` describes **the text that was analyzed**
+- `sentence` is an **object describing where the element was found in the converted HTML**. This object contains a start character position, `begin`, and an end character position, `end`.
+- `types` is an array describing **what the element is** and **who it affects**. It consists of one or more sets of `party` (who is being affected by the sentence) and `nature` (the effect of the sentence on the identified party).
+- `categories` is an array of the functional categories (the subject matter) of the identified sentence.
+*Note: Some sentences do not fall under any type or category, in which case the types and categories arrays are returned empty.*
+*Note: Some sentences cover multiple topics and will therefore be returned with multiple types and categories items listed.*
+
+Additionally, the `parties` array contains any identified **parties**.
+```
+  "parties" : [ {
+    "party" : "Customer",
+    "role" : "Buyer"
+  } ]
+```
+There are two important sections to each object in the `parties` array:
+
+- `party` is the text that was identified as a **party in the document**.
+- `role` is the **specific role of the party** that has been identified. 
+*Note: Roles change based on sub-domain, see the information on the specified sub-domain for a list of possible roles. Parties that cannot be identified to a specific role are labeled as Unknown.*
+
