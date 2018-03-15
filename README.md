@@ -11,7 +11,7 @@ The goal of this lab is to:
 4. Spark ideas around optimizing existing business processes by leveraging the output of Element Classification
 
 
-***Note:** Element Classification is available on both (Watson Discovery)[https://www.ibm.com/watson/services/discovery/] and (IBM Cloud Private)[https://www.ibm.com/cloud-computing/products/ibm-cloud-private/]. This lab will focus on the value derived from the output of Element Classification, with an experience most similar to IBM Cloud Private.*
+***Note:** Element Classification is available on both [Watson Discovery](https://www.ibm.com/watson/services/discovery/) and [IBM Cloud Private](https://www.ibm.com/cloud-computing/products/ibm-cloud-private/). This lab will focus on the value derived from the output of Element Classification, with an experience most similar to IBM Cloud Private.*
 
 ---
 ## Overview
