@@ -217,5 +217,15 @@ Look for the comment `// Build the URL with the parameters from Part 1` in the `
 ### III. Print the response
 Find the part in the code where the request is made and the response is returned. Print the `body` of the response to visualize the JSON returned by Element classification. The response should look similar to Part 1, and for your convenience a sample response can be found in the file `sample-response.json`.
 
-#### IV. 
+#### IV. Jump to the first category or type
+1. Find function `onElementLinkClicked` in `client/scripts/main.js`
 
+2. After `clearHighlights(sentenceRefs)`, add:
+
+```
+let firstRef = document.getElementById(sentenceRefs[0]);
+
+firstRef.scrollIntoView();
+```
+
+3. Refresh the page and upload a document, click on a category or type to test your changes
