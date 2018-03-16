@@ -145,11 +145,10 @@ There are two important sections to each object in the `parties` array:
 
 ### IV. Understanding Contract Elements
 Parsed contracts from Element Classification are returned with each identified element analyzed.
-
 The following sections describe how the returned JSON describes the analysis.
 
 #### Type
-The following tables describe the nature and party values that can be identified.
+The following tables describe the `nature` and `party` values that can be identified.
 
 **Nature is the type of action the sentence requires.**
 
@@ -161,3 +160,33 @@ The following tables describe the nature and party values that can be identified
 | Obligation | The party in the element is required to fulfill the terms of the element.|
 | Right | The party in the element is guaranteed to receive the terms of the element.|
 
+#### Parties
+For each identified clause, affected parties are identified by name. Each identified party is then classified by `role`. Parties are the participants in the contract. The roles that can be identified for a contract are as follows:
+
+|Role|Description|
+|---|---|
+|Buyer|The party responsible for paying for the goods/services.|
+|End User|The party who will interact with the actual goods/services, explicitly distinguished from the Buyer.|
+|None|No party has been identified for this element, always paired with the Definition nature.|
+|Supplier|The party responsible for providing the goods/services.|
+
+#### Categories 
+Categories define the subject matter of the sentence. The following currently supported categories can be identified:
+
+|Categories|	Description|
+|---|---|
+|Assignments|	Encompasses the transfer of rights held by one party to another.|
+|Confidentiality|	Describes how confidential or private information will be handled such as who can share what, and how.|
+|Deliverables|	The items or services to be delivered at the end of a piece of work.|
+|Dispute Resolution	|Provides for any dispute arising between contracting parties, and how it will be handled.|
+|Force Majeure|	A clause that frees both parties from liability in case of a disruptive event.|
+|Indemnification|	Describes the remedies or consequences if terms are breached.|
+|Insurance|	Describes the level of insurance coverage a supplier must carry.|
+|Intellectual Property|	A clause that relates to patents, copyrights and trademarks. More generally may relate to invention, authorship or know-how.|
+|Liability|	Describes obligations and limitations on the responsibility of each party.|
+|Payment Terms & Billing|	Describes what payments are due and what the schedule for payment is.|
+|Pricing & Taxes|	Describes how the prices are made up and how the taxes are to be applied|
+|Privacy|	Describes the privacy regulations which apply.|
+|Responsibilities|	Describes what the responsibilities of each party are.|
+|Term & Termination|	The time over which something will happen, and the conditions under which it may end.|
+|Warranties|	Guarantee by a supplier of how a product will work.|
