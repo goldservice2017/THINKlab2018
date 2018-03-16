@@ -204,3 +204,18 @@ Every item (type or category) identified by Element Classification is given an `
 |Low|	There is some evidence to support the classification, but it may need further review to confirm.|
 
 ---
+
+## Part 2: Dive into the Code
+
+### I. Authenticate
+For this part of the lab, use your favorite text editor to open up the root folder `THINKlab2018` and dive into the code.
+The credentials for the Element Classification instance used in this lab were created ahead of time for you. Use the same credentials that you used in Part 1, place your username and password appropriately into the `.env` file.
+
+### II. Build the URL 
+Look for the comment `// Build the URL with the parameters from Part 1` in the `index.js` file. Here you will use the API base URL and parameters from Part 1 to build a valid URL, `var url` to make a request. Note, query parameters are denoted by a `?` after the base URL and are associated as key-value pairs using a `=`, separated by an `&`. For example, in `http://reah.me/path?name=reah&title=product-manager`, the base URL is `http://reah.me/path`, the `?` denotes the beginning of the query parameters, the first query parameter has a key `name` with value `reah`, and the second query parameter has a key `title` with value `product-manager`.
+
+### III. Print the response
+Find the part in the code where the request is made and the response is returned. Print the `body` of the response to visualize the JSON returned by Element classification. The response should look similar to Part 1, and for your convenience a sample response can be found in the file `sample-response.json`.
+
+
+
