@@ -143,3 +143,21 @@ There are two important sections to each object in the `parties` array:
 - `role` is the **specific role of the party** that has been identified. 
 *Note: Roles change based on sub-domain, see the information on the specified sub-domain for a list of possible roles. Parties that cannot be identified to a specific role are labeled as Unknown.*
 
+### IV. Understanding Contract Elements
+Parsed contracts from Element Classification are returned with each identified element analyzed.
+
+The following sections describe how the returned JSON describes the analysis.
+
+#### Type
+The following tables describe the nature and party values that can be identified.
+
+**Nature is the type of action the sentence requires.**
+
+| Nature | Description | 
+| --- | --- |
+| Definition | This element adds clarity for a term/relationship/etc. Action is not required to fulfill this element and no party is affected.|
+| Disclaimer | The party in the element is not obligated to fulfill the specific terms in the element, but is not barred from doing so. |
+| Exclusion | The party in the element will not fulfill the specific terms laid out in the element.|
+| Obligation | The party in the element is required to fulfill the terms of the element.|
+| Right | The party in the element is guaranteed to receive the terms of the element.|
+
