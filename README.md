@@ -217,5 +217,5 @@ Look for the comment `// Build the URL with the parameters from Part 1` in the `
 ### III. Print the response
 Find the part in the code where the request is made and the response is returned. Print the `body` of the response to visualize the JSON returned by Element classification. The response should look similar to Part 1, and for your convenience a sample response can be found in the file `sample-response.json`.
 
-
+#### IV. 
 

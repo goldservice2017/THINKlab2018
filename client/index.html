@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/simple.css">
+    <link rel="stylesheet" href="style/dropzone.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="spinner"></div>
+    </div>
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">
+                    <img src="images/avatar.svg"> Think2018 - Element Classification Lab</h1>
+            </div>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <div class="error-message">The Error Message...</div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div id="accordion">
+            <div class="card bg-default mb-1">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseUpload" aria-expanded="true" aria-controls="collapseUpload">
+                            Upload a contract
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseUpload" class="collapse show" aria-labelledby="headingUpload" data-parent="#accordion">
+                    <div class="card-body">
+                        <form action="/parse" method="post" class="dropzone" id="my-awesome-dropzone"></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card bg-default mb-1" style="height:55vh">
+                    <div class="card-header">Element Classes</div>
+                    <div class="card-body">
+                        <div class="elements-list">
+                            <div class="categories"></div>
+                            <div class="types"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card bg-default mb-1" style="height:55vh">
+                    <div class="card-header">Output Document</div>
+                    <div class="card-body">
+                        <div class="document-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/jquery-3.3.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="scripts/dropzone.js"></script>
+        <script src="scripts/htmltagging.js"></script>
+        <script src="scripts/main.js"></script>
+        <script>
+            // "myAwesomeDropzone" is the camelized version of the HTML element's ID
+            Dropzone.options.myAwesomeDropzone = {
+                paramName: "file", // The name that will be used to transfer the file
+                maxFilesize: 10, // MB
+                timeout: null,
+                accept: function (file, done) {
+                    resetView()
+                    $('.alert').hide()
+                    $('.overlay').show()
+                    done();
+                },
+                success: function(file, response) {
+                    // Build out the rest of the page with the response
+                    handleParseResponse(response)
+                    // collapse the accordian
+                    $('#collapseUpload').collapse()
+                },
+                error: function(file, error) {
+                    $('.error-message').text(error.body)
+                    $('.alert').show()
+                },
+                complete: function(file) {
+                    // Remove the file after it was processed
+                    this.removeFile(file)
+                    // Hide the spinner
+                    $('.overlay').hide()
+                }
+            };
+        </script>
+    </div>
+</body>
+
+</html>
