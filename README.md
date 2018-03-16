@@ -18,13 +18,13 @@ The goal of this lab is to:
 **Watson Compare and Comply:** _Element Classification_ makes it possible to rapidly parse through governing documents to convert, identify, & classify elements of importance. Using state of the art Natural Language Processing, party (who it refers to), nature (the type of element), & category (specific class) are extracted from elements of a document.
 
 Watson Compare and Comply: Element Classification is designed to provide:
-- Natural Language Understanding of Contracts and Regulatory documents
+- Natural Language Understanding of Contractual documents
 - The ability to convert programmatic PDF to annotated JSON
 - Identification of legal Entities and Categories that align with subject matter expertise
 	
 Watson Compare and Comply: Element Classification brings together a functionally rich set of automated Watson technologies to convert & classify programmatic PDFs. It processes a PDF document into a structured HTML format, identifying sections, lists, footnotes, and tables. Then it parses the aforementioned elements and annotates them with domain-specific types and categories. Finally, surfacing these insights to the user in a JSON format. 
 
-Watson Compare and Comply: Element Classification securely transmits your data performing encryption in flight and at rest. For information about IBM Cloud security, see theIBM Cloud Service Description.
+Watson Compare and Comply: Element Classification securely transmits your data performing encryption in flight and at rest. For information about IBM Cloud security, see the IBM Cloud Service Description.
 
 ---
 ## Getting Started
@@ -60,7 +60,7 @@ This file contains the logic to parse the returned HTML text and insert tags int
 ---
 ## Part 1:
 ### I. Identify appropriate documents to analyze
-The current version of Watson Compare and Comply: Element Classification has been designed to analyze contract and regulatory style documents that meet the following criteria:
+The current version of Watson Compare and Comply: Element Classification has been designed to analyze contract style documents that meet the following criteria:
 - Files to be analyzed are in PDF format & programmatically created, i.e. not scanned. 
 *(Note: You can identify a programmatic PDF by opening the document in a PDF viewer and using the Text select tool to select a single word. If you cannot select a single word in the document, the file cannot be parsed.)*
 • Files are no larger than 50Mb in size
@@ -191,7 +191,6 @@ Categories define the subject matter of the sentence. The following currently su
 |Responsibilities| Describes tasks ancillary to the agreement, over which only one of the parties has oversight and control. |
 |Scope of Work|  Describes what is in the contract and what is not.|
 |Subcontracts| Describes the hiring third parties to perform certain duties under the contract and the permissions, rights, restrictions, and consequences thereto and arising therefrom.|
-
 |Responsibilities|	Describes what the responsibilities of each party are.|
 |Term & Termination|	The time over which something will happen, and the conditions under which it may end.|
 |Warranties|	Guarantee by a supplier of how a product will work.|
