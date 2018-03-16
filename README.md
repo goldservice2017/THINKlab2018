@@ -178,6 +178,7 @@ Categories define the subject matter of the sentence. The following currently su
 |Assignments|	Encompasses the transfer of rights held by one party to another.|
 |Confidentiality|	Describes how confidential or private information will be handled such as who can share what, and how.|
 |Deliverables|	The items or services to be delivered at the end of a piece of work.|
+|Delivery| Describes the action of delivering a good or service. |
 |Dispute Resolution	|Provides for any dispute arising between contracting parties, and how it will be handled.|
 |Force Majeure|	A clause that frees both parties from liability in case of a disruptive event.|
 |Indemnification|	Describes the remedies or consequences if terms are breached.|
@@ -187,6 +188,10 @@ Categories define the subject matter of the sentence. The following currently su
 |Payment Terms & Billing|	Describes what payments are due and what the schedule for payment is.|
 |Pricing & Taxes|	Describes how the prices are made up and how the taxes are to be applied|
 |Privacy|	Describes the privacy regulations which apply.|
+|Responsibilities| Describes tasks ancillary to the agreement, over which only one of the parties has oversight and control. |
+|Scope of Work|  Describes what is in the contract and what is not.|
+|Subcontracts| Describes the hiring third parties to perform certain duties under the contract and the permissions, rights, restrictions, and consequences thereto and arising therefrom.|
+
 |Responsibilities|	Describes what the responsibilities of each party are.|
 |Term & Termination|	The time over which something will happen, and the conditions under which it may end.|
 |Warranties|	Guarantee by a supplier of how a product will work.|
