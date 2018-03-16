@@ -190,3 +190,13 @@ Categories define the subject matter of the sentence. The following currently su
 |Responsibilities|	Describes what the responsibilities of each party are.|
 |Term & Termination|	The time over which something will happen, and the conditions under which it may end.|
 |Warranties|	Guarantee by a supplier of how a product will work.|
+
+#### Assurance
+Every item (type or category) identified by Element Classification is given an `assurance` rating. The possible assurance values are described below:
+
+|Assurance|	Description|
+|---|---|
+|High|	There is significant evidence that the classification given is representative of the content.|
+|Low|	There is some evidence to support the classification, but it may need further review to confirm.|
+
+---
