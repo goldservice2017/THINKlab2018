@@ -58,7 +58,7 @@ This is the main javascript file that implements all the logic for the web page 
 This file contains the logic to parse the returned HTML text and insert tags into the HTML to be selected when specific categories or types are selected to be annotated.
 
 ---
-## Part 1:
+## Part 1: Making an API Call
 ### I. Identify appropriate documents to analyze
 The current version of Watson Compare and Comply: Element Classification has been designed to analyze contract style documents that meet the following criteria:
 - Files to be analyzed are in PDF format & programmatically created, i.e. not scanned. 
