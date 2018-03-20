@@ -44,6 +44,11 @@ app.post('/parse', (req, res, err) => {
 
     // Build the URL with the parameters from Part 1
     var url
+    url = 'https://gateway.watsonplatform.net/compare-and-comply-experimental/api' +
+      '/v1/parse?version=2017-10-30' +
+      '&analyze=true' +
+      '&subdomain=contract' +
+      '&categorize=true'
 
     let options = {
       url: url,

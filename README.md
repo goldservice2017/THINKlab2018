@@ -61,10 +61,11 @@ This file contains the logic to parse the returned HTML text and insert tags int
 ## Part 1: Making an API Call
 ### I. Identify appropriate documents to analyze
 The current version of Watson Compare and Comply: Element Classification has been designed to analyze contract style documents that meet the following criteria:
+
 - Files to be analyzed are in PDF format & programmatically created, i.e. not scanned. 
 *(Note: You can identify a programmatic PDF by opening the document in a PDF viewer and using the Text select tool to select a single word. If you cannot select a single word in the document, the file cannot be parsed.)*
-• Files are no larger than 50Mb in size
-• PDF files are not restricted nor secured, i.e. they are not password protected
+- Files are no larger than 50Mb in size
+- PDF files are not restricted nor secured, i.e. they are not password protected
 
 We will be using the PDFs found in the folder titled [**sample-PDFs**](sample-PDFs/) for this lab. 
 
