@@ -106,6 +106,8 @@ function onElementLinkClicked(e) {
 
     if (sentenceRefs.length > 0) {
         clearHighlights(sentenceRefs)
+        let firstRef = document.getElementById(sentenceRefs[0]);
+        firstRef.scrollIntoView();
     }
     let split = $(e.target).data('id').split('.')
     if (split[0] === 'category') {
